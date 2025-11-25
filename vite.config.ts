@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// ⚠️ 在 StackBlitz 里不要用 path.resolve，直接用 '/src'
 export default defineConfig({
   plugins: [react()],
+  base: '/decision_making_final/',   // 仓库名
   resolve: {
     alias: {
       '@': '/src',
     },
   },
-});
+})
