@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+📘 Influence Playbook – Make It Your Own
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, personal playbook designed to consolidate and apply key influence concepts from the course.
+This project transforms theoretical tools—persuasion tactics, negotiation levers, structure-based influence, and meta-skills—into a hands-on, customizable system you can use in future work, leadership, and decision-making contexts.
 
-Currently, two official plugins are available:
+👉 Live Demo:
+https://rsm-oujia.github.io/decision_making_final/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Purpose
 
-## React Compiler
+The goal of this final project is to build a highly personalized “influence cheat sheet”—a device that helps my future self remember, apply, and practice the most important tools from the second half of the course.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Instead of passively summarizing readings and slides, this project re-packages them into a functional web app where I:
 
-## Expanding the ESLint configuration
+Browse and study influence levers
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Build my own customized influence strategy
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Translate ideas into concrete actions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Practice daily habits
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Test understanding with micro-quizzes
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🧩 Features
+1. Influence Lever Library
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Includes tactics from:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Lincoln’s 12 influence tools (Ethos / Logos / Pathos, Allocentrism, Exchange, Might…)
+
+LBJ case tools (Agenda control, Publicity machine, Patronage levers)
+
+Modern organizational influence (psychological safety, peer leadership, managing up)
+
+Each card contains:
+
+Summary
+
+Prompts for application
+
+Option to add to my personal playbook
+
+2. Playbook Builder
+
+A personalized dashboard where I can:
+
+Select tactics meaningful to my goals
+
+Set priority levels
+
+Pair them with Cialdini principles
+
+Add specific implementation notes
+
+Mark progress/completion
+
+Data is stored locally in the browser.
+
+3. Daily Practice
+
+A lightweight checklist habit system:
+
+Add small, concrete, observable actions
+
+Inspired by the “Seven Habits of the Influential”
+
+Helps translate strategy into consistent behavior
+
+4. Course Guides Integration
+
+Embedded reference modules from lectures:
+
+Seven Habits of the Influential
+
+Tit-for-Tat and repeated game strategy
+
+Soft / Smart / Hard influence styles
+
+Made-to-Stick communication checklist
+
+These modules help reinforce key frameworks while keeping them accessible.
+
+5. Micro-Quiz
+
+A 3-question quiz to test intuition and memory of core concepts.
+
+🛠️ Tech Stack
+
+React + TypeScript (Vite)
+
+Fully custom lightweight UI components (Card, Button, Tabs, etc.)
+
+No external UI libraries (built to maximize portability)
+
+Client-side state stored via localStorage
+
+Deployed using GitHub Actions + GitHub Pages
+
+🚀 Deployment
+
+This site is automatically built and deployed with GitHub Actions using:
+
+npm run build to generate static assets
+
+actions/upload-pages-artifact to package /dist
+
+actions/deploy-pages to publish to GitHub Pages
+
+Configured via .github/workflows/deploy.yml.
