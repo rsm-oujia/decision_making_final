@@ -675,7 +675,7 @@ export default function App() {
           <div className="flex items-center justify-between gap-3 mb-6">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
-                Influence Playbook
+                Influence Playbook -- Owen's Decision Making Final Website
               </h1>
               <p className="text-muted-foreground mt-2">
                 Make it yours. Pick the levers, write the moves, and practice
